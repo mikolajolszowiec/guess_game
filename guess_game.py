@@ -9,3 +9,23 @@ def get_user_range():
 
 def random_from_range(min_d, max_d):
 	return randint(min_d, max_d)
+
+def get_user_hit():
+	print("Podaj ziomeczku swoja liczbe")
+	return int(input())
+
+
+def app_run():
+	min_int, max_int = get_user_range()
+	random_int = random_from_range(min_int,max_int)
+	while True:
+		x = get_user_hit()
+		if x == random_int:
+			print("brawo wygrales")
+			break
+		elif x>random_int:
+			print("za duzo")
+		elif x<random_int:
+			print("za malo")
+
+app_run()
